@@ -93,11 +93,22 @@ footer p {
 
 @media (max-width: 1270px) 
 {
+    nav {
+        height: auto;
+    }
+    nav li {
+        display:block;
+        padding: 10px;
+    }
     .container {
         margin: auto;
         display: grid;
         grid-template-columns: auto;
         gap: 20px;
+    }
+    .sessoes {
+        height: auto;
+        width: auto;
     }
 }
 @media (max-width: 850px) {
