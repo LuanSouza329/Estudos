@@ -8,7 +8,6 @@ body {
     background-image: linear-gradient(to bottom left, rgba(255, 255, 0, 0.658), rgba(255, 0, 0, 0.691), rgba(0, 0, 255, 0.737));
 }
 nav {
-    background-image: linear-gradient(to left,  rgba(255, 255, 0, 0.345), rgba(255, 0, 0, 0.293), rgba(0, 0, 255, 0.457) );
     height: 100px;
     text-align: center;
     width: 100%;
@@ -39,12 +38,10 @@ nav li a:hover{
 }
 
 .sessoes {
+    height: 870px;
     background-image: linear-gradient(to bottom left, rgba(255, 255, 0, 0.345), rgba(255, 0, 0, 0.293), rgba(0, 0, 255, 0.457));
     margin: auto;
-    width: 400px;
-    height: 870px;
     text-align: center;
-    border: 1px solid black;
     font-size: 30px;
     font-size: medium;
     background-color: aliceblue;
@@ -94,7 +91,6 @@ footer p {
 @media (max-width: 1270px) 
 {
     nav {
-        background-color: aqua;
         height: auto;
     }
     nav li {
