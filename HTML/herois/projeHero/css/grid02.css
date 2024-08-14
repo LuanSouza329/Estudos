@@ -94,6 +94,7 @@ footer p {
 @media (max-width: 1270px) 
 {
     nav {
+        background-color: aqua;
         height: auto;
     }
     nav li {
