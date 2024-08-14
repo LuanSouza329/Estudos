@@ -102,7 +102,6 @@ footer p {
 }
 @media (max-width: 850px) {
     .container {
-        width: 99%;
         margin: auto;
         display: grid;
         grid-template-columns: auto;
