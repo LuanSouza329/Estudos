@@ -93,15 +93,11 @@ footer p {
 
 @media (max-width: 1270px) 
 {
-    main {
-        background-color:aqua;
-    }
     .container {
-        width: 99%;
         margin: auto;
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;    
+        grid-template-columns: auto;
+        gap: 20px;
     }
 }
 @media (max-width: 850px) {
@@ -110,9 +106,5 @@ footer p {
         display: grid;
         grid-template-columns: auto;
         gap: 20px;
-    }
-    .sessoes {
-        width: 400px;
-        height: 970px;
     }
 }
