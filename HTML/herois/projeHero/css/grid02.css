@@ -102,6 +102,7 @@ footer p {
 }
 @media (max-width: 850px) {
     .container {
+        background-color: aqua;
         margin: auto;
         display: grid;
         grid-template-columns: auto;
