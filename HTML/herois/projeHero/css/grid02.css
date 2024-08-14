@@ -93,6 +93,7 @@ footer p {
 
 @media (max-width: 1270px) {
     .container {
+        background-color: aqua;
         width: 99%;
         margin: auto;
         display: grid;
