@@ -91,9 +91,12 @@ footer p {
     color: aliceblue;
 }
 
-@media (max-width: 1270px) {
+@media (max-width: 1270px) 
+{
+    main {
+        background-color:aqua;
+    }
     .container {
-        background-color: aqua;
         width: 99%;
         margin: auto;
         display: grid;
@@ -103,7 +106,6 @@ footer p {
 }
 @media (max-width: 850px) {
     .container {
-        background-color: aqua;
         margin: auto;
         display: grid;
         grid-template-columns: auto;
