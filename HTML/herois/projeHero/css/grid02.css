@@ -61,6 +61,11 @@ nav li a:hover{
     margin: 10px;
     font-style: italic;
 }
+#hero {
+    background-image: url('../imagens/Iron_man.jpg');
+    background-size:350px 350px;
+    background-repeat: no-repeat;
+}
 .heroi{
     height: 350px;
     width: 350px;
