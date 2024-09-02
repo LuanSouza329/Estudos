@@ -76,14 +76,14 @@ section#img02 {
 section.imagem {
     background-color: rgba(52, 51, 51, 0.247);
     color: white;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.468);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.404);
     background-size: cover;
     background-attachment: fixed;
 }
 
 section.imagem > p {
     display: inline-block;
-    background-color: rgba(80, 78, 78, 0.673);
+    background-color: rgba(80, 78, 78, 0.538);
     padding: 7px;
     text-shadow: 2px 1px 0px black;
 }
