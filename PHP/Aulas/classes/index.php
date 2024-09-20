@@ -12,13 +12,22 @@
 </html>
 
 <?php 
+use Estudos\PHP\Aulas\Classes\Nucleo\Helper;
 
-include './Nucleo/Mensagem.php';
+require './PHP/vendor/autoload.php';
 
-use PHP\Aulas\Classes\Nucleo\Mensagem; /*Para usar clases que usam o nameSpace usamos a palavra reservada use, somente sendo chamada assim que iremos poder instanciar nosssas classes */
+ /*Para usar clases que usam o nameSpace usamos a palavra reservada use, somente sendo chamada assim que iremos poder instanciar nosssas classes */
 
 // echo $msg->sucesso(mensagem: "Mensagem de sucesso")->renderizar(); /*Encadeamento de métodos, podemos chamar mais de um método de uma vez */
 
+// $controlador = new Controlador(tema: "Luan de Souza");
+
+var_dump(value: $controlador);
+
+$helper = new Helper();
+
+echo $helper::dizerOla();
 
 
-echo (new Mensagem())->texto(mensagem: "Olá mundo");
+// echo (new Mensagem())->texto(mensagem: "Olá mundo");
+// echo (new Helper())::soma(n1: 12, n2: 13);

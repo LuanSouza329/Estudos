@@ -1,0 +1,17 @@
+{
+    "name": "estudos/php8",
+    "description": "teste",
+    "license": "n",
+    "autoload": {
+        "psr-4": {
+            "Estudos\\": "PHP/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LuanSouza329",
+            "email": "151081007+LuanSouza329@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

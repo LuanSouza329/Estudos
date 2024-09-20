@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Zebrado</title>
+    <style>
+        body {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        tbody > tr:nth-child(2n) { /*Pseud classe para pular as linhas de 2 em 2, pode-se colocar mais*/
+            color: white;
+            background-color: rgba(48, 43, 43, 0.382);
+        }
+        caption {
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+        table {
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;
+            position: relative; /*Configuração de cabeçalho fixo*/
+        }
+        thead > tr > th { /*Config de cabeçalho fixo - Quando termina a tabela ele vai embora junto*/
+            /* position: sticky; 
+            top: 0; */
+        }
+        th{
+            background-color: lightcoral;
+            padding: 5px;
+            text-align: left;
+            border: 1px solid black;
+            position: sticky; 
+            top: 0;
+        }
+        td,td{
+            padding: 5px;
+            border: 1px solid black;
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Tabela Zebrada</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estados</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td> <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>1234</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>123465</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
