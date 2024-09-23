@@ -1,10 +1,8 @@
 {
-    "name": "estudos/php8",
-    "description": "teste",
-    "license": "n",
+    "name": "luans/aulas",
     "autoload": {
         "psr-4": {
-            "Estudos\\": "PHP/"
+            "Luans\\Aulas\\": "src/"
         }
     },
     "authors": [

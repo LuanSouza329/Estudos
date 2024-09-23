@@ -11,10 +11,18 @@
 </body>
 </html>
 
-<?php 
-use Estudos\PHP\Aulas\Classes\Nucleo\Helper;
+<?php
 
-require './PHP/vendor/autoload.php';
+
+require '../vendor/autoload.php';
+
+use PHP\Aulas\Src\Teste\Teste;
+
+$teste = new Teste ();
+
+echo $teste->oi();
+
+
 
  /*Para usar clases que usam o nameSpace usamos a palavra reservada use, somente sendo chamada assim que iremos poder instanciar nosssas classes */
 
@@ -22,11 +30,6 @@ require './PHP/vendor/autoload.php';
 
 // $controlador = new Controlador(tema: "Luan de Souza");
 
-var_dump(value: $controlador);
-
-$helper = new Helper();
-
-echo $helper::dizerOla();
 
 
 // echo (new Mensagem())->texto(mensagem: "Olá mundo");

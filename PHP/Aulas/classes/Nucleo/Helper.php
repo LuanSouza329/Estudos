@@ -1,7 +1,6 @@
 <?php 
 
-namespace Estudos\PHP\Aulas\Classes\Nucleo;
-
+namespace PHP\Aulas\Classes\Nucleo;
 
 class Helper 
 {

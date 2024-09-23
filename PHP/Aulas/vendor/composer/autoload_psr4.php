@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Estudos\\' => array($baseDir . '/PHP'),
+    'Luans\\Aulas\\' => array($baseDir . '/src'),
 );
