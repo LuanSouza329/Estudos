@@ -1,7 +1,7 @@
 <?php 
 
 
-namespace PHP\Aulas\Classes\Nucleo;
+namespace PHP\Aulas\Classes\Core;
 
 class Controlador {
     public $tema = null;

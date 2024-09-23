@@ -14,13 +14,11 @@
 <?php
 
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 
-use PHP\Aulas\Src\Teste\Teste;
+use PHP\Aulas\Classes\Core\Helper;
 
-$teste = new Teste ();
-
-echo $teste->oi();
+echo Helper::dizerOla();    
 
 
 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace PHP\Aulas\Classes\Nucleo; /*NameSpace da classe Mensagem pegando o seu diretório */
+namespace PHP\Aulas\Classes\Core;
 
 class Mensagem {
 
