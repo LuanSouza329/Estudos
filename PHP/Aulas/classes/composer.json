@@ -6,10 +6,9 @@
             "email": "151081007+LuanSouza329@users.noreply.github.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
-            "Core\\": "Core/"
+            "PHP\\Aulas\\Classes\\Core\\": "Core/"
         }
     }
 }

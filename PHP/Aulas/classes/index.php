@@ -14,11 +14,14 @@
 <?php
 
 
-require './vendor/autoload.php';
+require 'vendor/autoload.php';
+
 
 use PHP\Aulas\Classes\Core\Helper;
+use PHP\Aulas\Classes\Core\Mensagem;
 
-echo Helper::dizerOla();    
+
+
 
 
 
