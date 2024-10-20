@@ -10,5 +10,8 @@
         "psr-4": {
             "PHP\\Aulas\\Classes\\Core\\": "Core/"
         }
+    },
+    "require": {
+        "twig/twig": "^3.0"
     }
 }

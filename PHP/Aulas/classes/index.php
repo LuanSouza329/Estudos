@@ -24,7 +24,6 @@ use PHP\Aulas\Classes\Core\Mensagem;
 
 
 
-
  /*Para usar clases que usam o nameSpace usamos a palavra reservada use, somente sendo chamada assim que iremos poder instanciar nosssas classes */
 
 // echo $msg->sucesso(mensagem: "Mensagem de sucesso")->renderizar(); /*Encadeamento de métodos, podemos chamar mais de um método de uma vez */
