@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(127, 13, 127);
+}
+#caixa {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 330px;
+    flex-direction: column;
+    border: 1px solid black;
+}
+#calc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 330px;
+    height: 250px;
+}
+#caixa {
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+}
+.numbers {
+    display: flex;
+    width: 80px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+#tela {
+    padding: 5px;
+    font-size: 1.2em;
+    
+}
+.numbers:hover {
+    background-color: rgba(0, 0, 0, 0.092);
+    
+}
+#titulo{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.597);
+}
