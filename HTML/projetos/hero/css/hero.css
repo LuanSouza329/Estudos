@@ -6,7 +6,7 @@
 
 #fundo {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("/HTML/herois/projeHero/imagens/image.png");
+    background-image: url("/HTML/projetos/hero/imagens/image.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed;
@@ -72,7 +72,7 @@ nav li a:hover{
     font-style: italic;
 }
 #hero {
-    background-image: url('../imagens/iron_man.png');
+    background-image: url('/HTML/projetos/hero/imagens/iron_man.png');
     background-size:350px 350px;
     background-repeat: no-repeat;
 }
