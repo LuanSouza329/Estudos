@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="" method="GET" autocomplete="on">
+        <fieldset>
+            <p>
+                <label for="enome">Nome:</label>
+                <input type="text" nome="nome" id="enome" minlength="3" maxlength="15" autocomplete="name" placeholder="Digite o seu nome" required>
+            </p>
+            <p>
+                <label for="eidade">Idade: </label>
+                <input type="number" name="idade" id="eidade" min="0" max="99" required>
+            </p>
+            <p>
+                <label for="euf">UF: </label>
+                <input type="text" name="uf" id="euf" min="2" maxlength="2">
+            </p>
+            <p>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="masculino" value="Masculino"> <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino" value="Feminino"> <label for="feminino">Feminino</label>
+            </p>
+            <p>
+                <legend>Esportes</legend>
+                <input type="checkbox" name="efutebol" id="efutebol" value="Futebol"> <label for="efutebol">Futebol</label>
+                <input type="checkbox" name="ebasquete" id="ebasquete" value="Basquete"> <label for="ebasquete">Basquete</label>
+                <input type="checkbox" name="evolei" id="evolei" value="Volei"> <label for="evolei">Volei</label>
+                <input type="checkbox" name="ehandball" id="ehandball" value="Handball"> <label for="ehandball">Handball</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
