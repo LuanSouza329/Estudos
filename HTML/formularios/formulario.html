@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background-color: aliceblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #caixa {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        #caixa input {
+            width: 60%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #sexo {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+        }
+        #i_enviar {
+            width: 95%;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" autocomplete="on">
+        <div id="caixa">
+            <label for="i_nome">Nome: </label>
+            <input type="text" name="nome" id="i_nome" minlength="3" maxlength="15" autocomplete="name" placeholder="Digite seu nome" required>
+        </div>
+        <div id="caixa">
+            <label for="i_sobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="i_sobrenome" minlength="3" maxlength="15">
+        </div>
+        <div id="caixa">
+            <label for="i_nascimento">Data de Nascimento: </label>
+            <input type="date" name="nascimento" id="i_nascimento" required>
+        </div>
+        <div id="caixa">
+            <label for="i_email">Email: </label>
+            <input type="email" name="email" id="i_email" autocomplete="email">
+        </div>
+        <div id="caixa">
+            <label for="i_telefone">Telefone: </label>
+            <input type="tel" name="telefone" id="i_telefone" autocomplete="tel">   
+        </div>        
+        <div id="caixa">
+            <legend id="sexo">Sexo: </legend> 
+            <div id="sexo">
+                <input type="radio" name="sexo" id="i_masculino" value="Masculino"> <label for="i_masculino">Masculino</label>
+                <input type="radio" name="sexo" id="i_feminino" value="Feminino"> <label for="i_feminino">Feminino</label>
+            </div>
+        </div>
+        <div id="caixa">
+            <label for="i_estados">Estado: </label>
+            <select name="estados" id="i_estados">
+                <option value="---">---Escolha---</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+        </div>
+        <div>
+            <input type="submit" value="Enviar" id="i_enviar">
+        </div>
+    </form>
+</body>
+</html>
