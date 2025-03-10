@@ -3,3 +3,10 @@
 /*
     Para portrait "Em pé"
 */
+
+body {
+    background: url('../imagens/cev-portrait.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
