@@ -6,3 +6,75 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+body, html {
+    background-color: rgb(173, 171, 171);
+}
+
+
+header > h1{
+    padding: 10px;
+    text-align: center;
+}
+
+#hamb {
+    background-color: rgb(22, 22, 22);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#hamb:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+
+menu {
+    display: none;
+}
+
+.menu.toggle {
+    display: block;
+}
+
+menu > ul {
+    list-style: none;
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border-top: 1px solid white;
+}
+
+menu > ul > li > a:hover {
+    background-color: rgb(136, 135, 135);
+    color: red;
+}
+
+main {
+    width: 90vw;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+main > article > h2 {
+    padding-bottom: 10px;
+}
+
+main > article > p {
+    text-align: justify;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
