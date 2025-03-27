@@ -1,0 +1,63 @@
+@charset "URF-8";
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(15, 31, 40);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 80px;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.campo {
+    width: 60vw;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+
+p{
+    display: flex;
+    align-items: center;
+}
+
+#i_enviar {
+    font-size: medium;
+    cursor: pointer;
+    margin-left: 42px;
+}
+
+#i_enviar:hover {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    width: 60vw;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+    margin-left: 44px;
+    cursor: pointer;
+}
+
