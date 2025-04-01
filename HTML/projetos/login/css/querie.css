@@ -1,0 +1,28 @@
+@charset "URF-8";
+
+@media screen and (min-width:768px) and (max-width: 992px) {
+    .campo {
+        width: 50vw;
+    }
+    .cadastro{
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    .campo {
+        width: 50vw;
+    }
+    .cadastro{
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .campo {
+        width: 35vw;
+    }
+    .cadastro{
+        width: 50vw;
+    }
+}
