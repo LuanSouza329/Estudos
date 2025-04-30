@@ -8,16 +8,17 @@
         @charset "UTF-8";
         main {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: row wrap; /* flex-flow é a combinação da flex-direction + flex-wrap*/
             background-color: black;
             padding: 10px;
-            height: 300px;
+            justify-content:space-evenly;
+            height: 500px;
         }
         div {
             height: 100px;
+            width: 100px;
             background-color: bisque;
             border: 1px solid black;
-            flex:auto;
         }
         div {
             text-align: center;
@@ -29,10 +30,6 @@
         <div> 1 </div>
         <div> 2 </div>
         <div> 3 </div>
-        <div> 4 </div>
-        <div> 5 </div>
-        <div> 6 </div>
-        <div> 7 </div>
     </main>
 </body>
 </html>
