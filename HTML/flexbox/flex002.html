@@ -9,7 +9,7 @@
         body{
             height: 100vh;
             display: flex;
-            flex-flow:  wrap;
+            flex-flow: wrap;
             align-items: center;
             justify-content: center;
         }
@@ -18,16 +18,18 @@
             flex-flow: row wrap; /* flex-flow é a combinação da flex-direction + flex-wrap*/
             background-color: black;
             padding: 10px;
-            justify-content:space-evenly;
+            justify-content: center;
             align-items: center;
+            align-content: stretch;  /*– vai alinhar os itens no eixo transversal quando estiveram dentro de WRAP (empacotados); Seu valor padrão é stretch*/
             height: 400px;
             width: 400px;
             border-radius: 10px;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.207);
         }
         div {
-            height: 100px;
+            flex: auto;
             width: 100px;
+            height: 100px;
             background-color: bisque;
             border: 1px solid black;
             text-align: center;
@@ -39,6 +41,8 @@
         <div> 1 </div>
         <div> 2 </div>
         <div> 3 </div>
+        <div> 4 </div>
+        <div> 5 </div>
     </main>
 </body>
 </html>
