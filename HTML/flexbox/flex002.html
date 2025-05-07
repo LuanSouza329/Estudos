@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox 001</title>
+    <title>FlexBox 002</title>
     <style>
         @charset "UTF-8";
+        body{
+            height: 100vh;
+            display: flex;
+            flex-flow:  wrap;
+            align-items: center;
+            justify-content: center;
+        }
         main {
             display: flex;
-            flex-flow: column wrap; /* flex-flow é a combinação da flex-direction + flex-wrap*/
+            flex-flow: row wrap; /* flex-flow é a combinação da flex-direction + flex-wrap*/
             background-color: black;
             padding: 10px;
             justify-content:space-evenly;
-            align-items: flex-start;
-            height: 500px;
+            align-items: center;
+            height: 400px;
+            width: 400px;
+            border-radius: 10px;
         }
         div {
             height: 100px;
