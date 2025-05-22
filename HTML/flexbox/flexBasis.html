@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis</title>
+    <style>
+        @charset 'utf-8';
+
+        main {
+            display: flex;
+            flex-flow: row nowrap;
+            border: 1px solid black;
+        }
+        .filho{
+            border: 1px solid red;
+            border-radius: 5px;
+            flex-basis: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="filho um"> Olá meu nome é luan </div>
+        <div class="filho"> as linhas só quebram no espaço </div>
+        <div class="filho"> tudoJuntoElaNãoVaiQuebrar</div>
+        <div class="filho"> É uma locura total </div>
+        <div class="filho"> kkkkk kkkkkkkkkkkkk kkkkkkk</div>
+    </main>
+</body>
+</html>
