@@ -17,19 +17,27 @@
             background-color: yellow;
             text-align: center;
             padding: 10px;
-            flex-grow: 1;
+            flex-basis: 100px;
         }
-        
+        .a {
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        .b {
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+        .c {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="filho a">a</div>
-        <div class="filho">b</div>
-        <div class="filho">c</div>
-        <div class="filho">d</div>
-        <div class="filho">e</div>
-        <div class="filho">f</div>
+        <div class="filho b">b</div>
+        <div class="filho c">c</div>
     </div>
 </body>
 </html>
