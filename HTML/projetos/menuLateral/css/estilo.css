@@ -19,19 +19,21 @@ header{
     color: white;
     padding: 10px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 header > h1{
     border: 1px solid black;
+    flex: 0 0 190px;
 }
 
 header > nav {
     border: 1px solid red;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
 nav > a {
@@ -43,6 +45,12 @@ nav > a {
     color: black;
     font-weight: bolder;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.246);
+}
+
+nav > a:hover {
+    background-color: black;
+    color: white;
+    transition: 4s;
 }
 
 main {
