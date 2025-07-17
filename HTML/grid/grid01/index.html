@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
+    <style>
+        div.container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100px 100px;
+            grid-gap: 10px;
+        }
+        div.item{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+    </div>
 </body>
 </html>
