@@ -5,32 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Template</title>
     <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
         .container{
             display: grid;
             border: 2px solid black;
-            grid-template: repeat(3, 100px) / repeat(3, 1fr);
-            gap: 5px;
-            place-items: stretch stretch;
-            place-content: stretch stretch;
+            width: 500px;
+            grid-template: repeat(3, 15l0px) / repeat(4, 1fr);   
+            gap: 10px;
             grid-auto-rows: 100px;
+            
         }
         .item{
             border: 1px solid greenyellow;
             text-align: center;
         }
+        .caixa1{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .caixa2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: aqua;
+        }
+
+        .caixa3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+
+            background-color: brown;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
+        <div class="caixa1"></div>
+        <div class="caixa2"></div>
+        <div class="caixa3"></div>
     </div>
 </body>
 </html>
