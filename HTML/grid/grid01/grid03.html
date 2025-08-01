@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Pratica</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            border: 1px solid black;
+            display: grid;
+            padding: 10px;
+
+            grid-template-rows: repeat(4, 100px);
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 100px;
+            gap: 10px;
+
+            justify-content: space-evenly;
+            width: 500px;
+            background-color: bisque;
+        }
+        .caixa1 {
+            border: 3px solid rgb(172, 31, 31);
+            background-color: aqua;
+            grid-row-start: 2;
+            grid-row-end: 5;
+            padding: 5px;
+        }
+        .caixa2 {
+            grid-row-start: 2;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: beige;
+            padding: 10px;
+        }
+        .caixa3{
+            grid-row-start: 2;
+            grid-row-end: 5;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            background-color: azure;
+            padding: 10px;
+        }
+        .nav{
+            background-color: black;
+            grid-row-start: 1;
+
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            color: white;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer{
+            background-color: blue;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><h1>LOGO</h1></div>
+        <div class="caixa1">
+            <ul>
+                <li class="link"><a href="#">Home</a></li>
+                <li class="link"><a href="#">Quem somos</a></li>
+                <li class="link"><a href="#"></a>Projetos</li>
+                <li class="link"><a href="#"></a>Saiba Mais</li>
+                <li class="link"><a href="#"></a>Contatos</li>
+            </ul>
+        </div>
+        <div class="caixa2">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis esse dolorem quasi alias voluptatum neque, reprehenderit expedita debitis nemo sed provident sunt voluptatibus incidunt, perferendis numquam, pariatur minus cum suscipit.
+            </p>
+        </div>
+        <div class="caixa3">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem iste odio aperiam ducimus ipsum. Cum tempore debitis impedi.
+            </p>
+        </div>
+        <div class="footer">2</div>
+    </div>
+</body>
+</html>
