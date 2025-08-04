@@ -11,10 +11,11 @@
             margin: 0;
         }
         .container{
+            padding: 10px;
             display: grid;
             border: 2px solid black;
             width: 500px;
-            grid-template: repeat(3, 150px) / repeat(3, 1fr);   
+            grid-template: repeat(3, 150px) / repeat(4, 1fr);   
             gap: 10px;
             grid-auto-rows: 100px;
             
@@ -24,30 +25,12 @@
             text-align: center;
         }
         .caixa1{
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-column-start: 1;
-            grid-column-end: 5;
+            grid-row: 1 / span 3;
+            grid-column: 1 / span 2;
         
-            background-color: black;
+            background-color: rgb(84, 81, 81);
             color: white;
             padding: 10px;
-        }
-        .caixa2{
-            grid-row-start: 2;
-            grid-row-end: 4;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            background-color: aqua;
-        }
-
-        .caixa3{
-            grid-row-start: 2;
-            grid-row-end: 4;
-            grid-column-start: 3;
-            grid-column-end: 5;
-
-            background-color: brown;
         }
     </style>
 </head>
