@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            grid-template: repeat(10, 100px) / repeat(3, 1fr);
+            border: 1px solid black;
+            padding: 5px;
+            gap: 5px;
+        }
+        .nav{
+            background-color: bisque;
+            grid-area: 1 / 1 / span 1 / -1;
+        }
+        .menu {
+            background-color: aqua;
+            grid-area: 2 / 1 / span 1 / -1;
+        }
+        .principal{
+            grid-area: 3 / 1 / span 7 / span 2;
+            background-color: black;
+        }
+        .secundario{
+            background-color: bisque;
+            grid-area: 3 / 3 / span 7 / -1;
+        }
+        .footer{
+            background-color: blue;
+            grid-area: 10 / 1 / span 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <nav class="nav"></nav>
+        <menu class="menu"></menu>
+        <div class="principal"></div>
+        <div class="secundario"></div>
+        <footer class="footer"></footer>
+    </main>
+</body>
+</html>
