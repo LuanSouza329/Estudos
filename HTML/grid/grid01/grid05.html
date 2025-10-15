@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        header{
+            display: flex;
+            background-color: aqua;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 15px;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        main{
+            display: grid;
+            grid-template: auto / auto 90% auto;
+            gap: 10px;
+        }
+        section {
+            background-color: beige;
+            grid-column: 2;
+            padding: 10px;
+            border-radius: 8px;
+            text-indent: 15px;
+        }
+        section::first-letter{
+            font-size: 2em;
+            font-style: italic;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <ul>
+            <li class="menu">teste</li>
+            <li class="menu">teste</li>
+            <li class="menu">teste</li>
+            <li class="menu">teste</li>
+            <li class="menu">teste</li>
+        </ul>
+    </header>
+    <main>
+        <section class="ficha">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae odio animi tempore rem at, optio ea repellat ab nisi provident cumque? Repellat error laborum, ea molestiae ducimus consequuntur sapiente rerum.
+            </p>
+        </section>
+        <section class="conteudo">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex a nulla eveniet exercitationem sit? Vitae neque, facere nemo exercitationem alias, praesentium distinctio aspernatur ullam dolor illum molestiae assumenda cupiditate explicabo.
+            </p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
