@@ -38,6 +38,9 @@ header {
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #menu ul {
@@ -95,7 +98,7 @@ section#ficha h1 {
     text-align: center;
 }
 
-section#ficha .descricao{
+section#ficha .descricao {
     text-indent: 10px;
 }
 
@@ -165,12 +168,11 @@ article h2 {
 
 #skill-container .progresso {
     height: 100%;
-    background-color: var(--destaque-inverso);
     border-radius: 4px;
     transition: width 2s ease-out;
 }
 
-#formacao-container{
+#formacao-container {
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
@@ -184,13 +186,13 @@ article h2 {
     transition: border-width 0.5s, border-color 0.5s;
 }
 
-#formacao-container .curso:hover{
+#formacao-container .curso:hover {
     border-left-width: 15px;
     border-color: var(--destaque);
     cursor: pointer;
 }
 
-#formacao-container .periodo{
+#formacao-container .periodo {
     font-size: 0.8em;
     font-weight: bold;
     color: var(--texto);
@@ -201,7 +203,7 @@ article h2 {
     font-size: 1.1em;
 }
 
-#projeto-container{
+#projeto-container {
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
@@ -218,19 +220,25 @@ article h2 {
     transition: border-color 0.5s, border-width 0.5s;
 }
 
-#projeto-container .projeto:hover{
+#projeto-container .projeto:hover {
     border-color: var(--destaque);
     border-left-width: 15px;
     cursor: pointer;
 }
 
-#projeto-container .foto{
+#projeto-container .foto-container {
+    display: block;
+    width: 100%;
+}
+
+#projeto-container .foto {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
     overflow: hidden;
     border-radius: 8px;
-} 
+}
+
 
 footer {
     background-color: var(--destaque);
@@ -245,18 +253,24 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #projeto-container .projeto{
+    #projeto-container .projeto {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
 
-    #projeto-container .projeto-info{
+    #projeto-container .projeto-info {
         max-width: 80%;
     }
-    
-    #projeto-container .foto{
-        aspect-ratio: 1/1;
+
+    #projeto-container .foto-container{
         max-width: 20%;
-        max-height: 200px;
+        border-radius: 8px;
+    }
+
+    #projeto-container .foto {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 8px;
     }
 }

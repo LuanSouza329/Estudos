@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const barras = skillContainer.querySelectorAll(".progresso");
 
-  // As barras começam sempre em 0%
+  // Inicializa todas as barras em 0%
   barras.forEach((barra) => {
     barra.style.width = "0%";
+    barra.style.background = "#0077ff"; 
   });
 
   // Observa quando o container entra na tela
@@ -17,21 +18,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const barras = entry.target.querySelectorAll(".progresso");
 
         barras.forEach((barra) => {
-          // Captura o valor da porcentagem do texto dentro da skill
           const span = barra.closest(".item")?.querySelector(".porcent");
           const perc = parseInt(span?.textContent.trim().replace("%", ""), 10) || 0;
 
-          // Aplica o valor de forma suave
+          // Define o gradiente de cores conforme o valor da skill
+          let bg = "#0077ff"; 
+          if (perc > 66.6) {
+            bg = "linear-gradient(to right, #0077ff 33.3%, #59b3fdff 66.6%, #f73030ff 100%)";
+          } else if (perc > 33.3) {
+            bg = "linear-gradient(to right,  #0077ff 33.3%, #59b3fdff 66.6%)";
+          }
+
+          // Aplica o gradiente e largura de forma suave
           requestAnimationFrame(() => {
+            barra.style.background = bg;
             barra.style.width = perc + "%";
           });
         });
 
-        // Para de observar (anima só uma vez)
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 }); // ativa quando metade do container estiver visível
+  }, { threshold: 0.5 });
 
   observer.observe(skillContainer);
 });
