@@ -1,61 +1,105 @@
-
 const origem = document.getElementById("origem");
 const destino = document.getElementById("destino");
 const resultado = document.getElementById("resultado");
 const btn_converter = document.getElementById("btn_converter");
 const valor = document.getElementById("valor");
 
-function  paises() {
-    fetch("https://api.frankfurter.app/currencies")
-        .then((resp) => resp.json())
-        .then((data) => {
-            for (let paises in data) {
+async function paises() {
+    try {
+        const resp = await fetch("https://api.frankfurter.app/currencies");
+        if (!resp.ok) throw new Error("Erro ao obter moedas");
 
-                const option1 = document.createElement("option");
-                option1.value = paises;
-                option1.textContent = paises;
+        const data = await resp.json();
+        const moedas = Object.keys(data);
 
-                const option2 = document.createElement("option");
-                option2.value = paises;
-                option2.textContent = paises;
 
-                origem.appendChild(option1);
-                destino.appendChild(option2);
-            }
-        })
-        .catch((error) => {
-            console.error("Erro ao obter Países:", error);
-        })
-};
+        moedas.forEach((pais) => {
+            const option1 = document.createElement("option");
+            option1.value = pais;
+            option1.textContent = pais;
 
-function converter(origem, destino, valor) {
-    fetch(`https://api.frankfurter.dev/v1/latest?base=${origem}&symbols=${destino}`)
-        .then((resp) => resp.json())
-        .then((data) => {
-            const convertedAmount = (valor * data.rates[destino]).toFixed(2);
-            resultado.innerText = `${valor} ${origem} = ${convertedAmount} ${destino}`
-        })
-        .catch((error)=>{
-            console.error("Erro ao obter a Conversão:", error);
-        })
-};
+            const option2 = document.createElement("option");
+            option2.value = pais;
+            option2.textContent = pais;
 
-function validacao (element) {
-    const validacao = element.validity;
+            origem.appendChild(option1);
+            destino.appendChild(option2);
+        });
+
+        // Define os valores iniciais dos selects
+        origem.value = moedas[0];
+        destino.value = moedas[1];
+
+    } catch (error) {
+        console.error("Erro ao obter Países:", error);
+    }
+}
+
+
+/* Função de conversão via API */
+async function converter(origem, destino, valor) {
+    try {
+        const resp = await fetch(`https://api.frankfurter.dev/v1/latest?base=${origem}&symbols=${destino}`);
+        if (!resp.ok) throw new Error("Erro na requisição");
+
+        const data = await resp.json();
+        const convertedAmount = (valor * data.rates[destino]).toFixed(2);
+
+        return `${valor} ${origem} = ${convertedAmount} ${destino}`;
+    } catch (error) {
+        console.error("Erro ao obter a conversão:", error);
+        resultado.innerText = "Erro ao converter. Tente novamente.";
+        return null;
+    }
+}
+
+
+function validacao(element) {
+    const valid = element.validity;
 
     element.setCustomValidity("");
 
-    if (validacao.valueMissing) {
+    if (valid.valueMissing) {
         element.setCustomValidity("Campo Obrigatório");
     }
-    
+    else if (element.type === "number" && Number(element.value) < 1) {
+        element.setCustomValidity("O valor mínimo do campo é 1");
+    }
+    else if (element.type === "number" && Number(element.value) > 100) {
+        element.setCustomValidity("O valor máximo do campo é 100");
+    }
+
     element.reportValidity();
 }
 
 
-paises();
+/* Função para validar o Input */
+paises().then(() => {
+
+    converter(origem.value, destino.value, 1).then((res) => {
+        resultado.innerText = res;
+    })
+
+    origem.addEventListener("change", () => {
+
+        converter(origem.value, destino.value, 1).then((res) => {
+            resultado.innerText = res;
+        })
+    })
+
+    destino.addEventListener("change", () => {
+        converter(origem.value, destino.value, 1).then((res) => {
+            resultado.innerText = res;
+        })
+    })
+})
+
 
 btn_converter.addEventListener("click", () => {
     validacao(valor);
-    converter(origem.value, destino.value, valor.value);
+    if (valor.checkValidity()) {
+        converter(origem.value, destino.value, Number(valor.value)).then((res) => resultado.innerText = res);
+    }
 });
+
+
