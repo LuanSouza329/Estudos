@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
     <header>
 
     </header>
     <main>
-        <p id="inicial"></p>
-        <h1 id="resultado"></h1>
-        <div>
-            <label for="origem">Valor de origem</label>
-            <select name="moerda-origem" id="origem"></select>
-           
-        </div>
-        <div>
-            <label for="destino">Valor destino</label>           
-            <select name="moerda-destino" id="destino"></select>
-        </div>
-        <input type="number" name="valor" id="valor" value="0.00" min="0" required>
-        <button id="btn_converter">Converter</button>
+        <section class="container">
+
+            <div class="text-container">
+                <p id="inicial"></p>
+                <h1 id="resultado"></h1>
+            </div>
+
+            <canvas id="grafico" class="grafico"></canvas>
+
+
+            <div class="moedas">
+                <select name="moerda-origem" id="origem"></select>
+                <select name="moerda-destino" id="destino"></select>
+            </div>
+
+            <input type="number" name="valor" id="valor" value="0.00" min="0" required>
+            <button id="btn_converter">Converter</button>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
