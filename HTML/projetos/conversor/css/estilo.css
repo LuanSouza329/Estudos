@@ -18,11 +18,13 @@ body {
 .container {
     display: flex;
     margin-top: 10px;
+    height: 96vh;
     padding: 10px;
     border-radius: 8px;
     flex-direction: column;
     background-color: white;
-    gap: 10px;
+    gap: 20px;
+    justify-content: space-evenly;
 }
 
 .container>.text-container {
@@ -31,10 +33,8 @@ body {
     gap: 5px;
 }
 
-#grafico {
-    width: 80%;
-    height: 200px;
-    margin: auto;
+.grafico-container {
+  width: 100%;
 }
 
 .container>.moedas {
@@ -60,4 +60,11 @@ body {
 
 .container>#btn_converter:hover {
     background-color: rgba(200, 196, 196, 0.707);
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    max-width: 700px;
+    margin: auto;
+  }
 }
