@@ -80,7 +80,6 @@ async function paises() {
 /* --- Conversão via API --- */
 async function converter(nomeOrigem, nomeDestino, valor) {
   try {
-    // Encontra os códigos correspondentes
     const codigoOrigem = Object.keys(mapaMoedas).find(k => mapaMoedas[k] === nomeOrigem);
     const codigoDestino = Object.keys(mapaMoedas).find(k => mapaMoedas[k] === nomeDestino);
 
