@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sol {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 50%;
+            animation-name: girar;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(1,1,1,1);
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="SOL.png" alt="Sol" class="sol">
+</body>
+
+</html>
