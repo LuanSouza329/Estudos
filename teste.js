@@ -1,21 +1,43 @@
-async function BuscarPaises(url) {
-  try {
-    const resp = await fetch(url);
-    if (!resp.ok) throw new Error("Erro ao obter moedas");
+const buscarDados = async () => {
+    try {
+        const response = await fetch("./teste.json");
 
-    const moedas = await resp.json();
+        if (!response) {
+            throw new Error("Erro ao buscar os dados")
+        };
 
-    return moedas;
-  }catch(err){
-    console.log(err);
-  }
+        const data = await response.json();
+
+        return data;
+    } catch (error) {
+        return error.message;
+    }
 }
 
-const url = "https://api.frankfurter.app/currencies";
+const body = document.body;
 
-BuscarPaises(url).then((moeda) => {
-  for (let nomeMoeda in moeda) {
-    console.log( nomeMoeda, moeda[nomeMoeda]);
-  }
+const criarElementos = (nome, itens) => {
+    const container = document.createElement("div");
+    container.className = "container";
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = nome;
+
+    const items = document.createElement("p");
+    items.textContent = [itens];
+
+    container.appendChild(paragraph);
+    container.appendChild(items);
+
+    return container
+}
+
+buscarDados().then((resp) => {
+    for (let c = 0; c < resp.length; c++) {
+        body.appendChild(criarElementos(resp[c].nome, resp[c].itens))
+    }
+}).catch((error) => {
+    console.log(error);
 })
+
 

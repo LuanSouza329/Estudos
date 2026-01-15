@@ -15,6 +15,7 @@ async function paises() {
     if (!resp.ok) throw new Error("Erro ao obter moedas");
 
     const data = await resp.json();
+    
     mapaMoedas = data;
     const moedas = Object.entries(data);
 

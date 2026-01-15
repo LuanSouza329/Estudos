@@ -1,0 +1,385 @@
+/* =============================
+   VARIÁVEIS (PREPARA DARK MODE)
+============================= */
+
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f3f4f6;
+    --text: #1f2937;
+    --primary: #3b82f6;
+    --accent: #10b981;
+    --highlight: #fbbf24;
+
+    --radius: 8px;
+    --transition: 0.2s ease;
+}
+
+/* =============================
+   GLOBAL
+============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 95vw;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+/* =============================
+   HEADER
+============================= */
+
+header {
+    background: var(--bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* =============================
+   HERO
+============================= */
+
+#hero {
+    background: var(--bg-alt);
+    text-align: center;
+    padding: 4rem 0;
+    background-image: url("../imagens/hemo.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    max-width: 600px;
+    margin: 0.5rem auto 2rem auto;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* =============================
+   QUEM SOMOS
+============================= */
+
+#quem-somos {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+}
+
+#quem-somos>.container {
+    padding: 2rem;
+    margin: 2px;
+}
+
+#quem-somos>.container>h2 {
+    margin: 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#quem-somos>.container>p {
+    margin: 15px;
+    text-indent: 5px;
+
+}
+
+#quem-somos>.container>p::first-letter {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#quem-somos>#metodologia {
+    background-color: var(--bg-alt);
+}
+
+/* =============================
+   CURSOS
+============================= */
+
+#cursos {
+    text-align: center;
+}
+
+.cursos-lista {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.curso {
+    background: var(--bg-alt);
+    height: 200px;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.curso-text {
+    background-color: #121212;
+    color: white;
+    opacity: 0.6;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: left;
+}
+
+.english {
+    background-image: url("../imagens/English.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.spanish {
+    background-image: url("../imagens/Spanish.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.french {
+    background-image: url("../imagens/French.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.curso:hover {
+    transform: translateY(-3px);
+}
+
+/* =============================
+   CONTATO
+============================= */
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+input,
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #d1d5db;
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+    background: var(--bg-alt);
+}
+
+/* =============================
+   DARK MODE
+============================= */
+
+body[data-theme="dark"] {
+    --bg: #151515;
+    /* fundo quente neutro */
+    --bg-alt: #1e1e1e;
+    /* contraste suave */
+    --text: #e8e0d4;
+    /* marfim */
+    --primary: #389dfc;
+    /* azul neutro (não neon) */
+    --accent: #1dbd71;
+    /* verde quente */
+    --highlight: #ffe08a;
+    /* amarelo creme */
+}
+
+
+body[data-theme="dark"] #hero {
+    background: #121212;
+}
+
+body[data-theme="dark"] p {
+    color: #e4dbcb;
+}
+
+body[data-theme="dark"] .curso,
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] .theme-toggle {
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 240, 220, 0.06);
+}
+
+body[data-theme="dark"] .curso {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+body[data-theme="dark"] .curso {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .english {
+    background-image: url("../imagens/English.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body[data-theme="dark"] .spanish {
+    background-image: url("../imagens/Spanish.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body[data-theme="dark"] .french {
+    background-image: url("../imagens/French.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+/* =============================
+   SWITCH DE TEMA
+============================= */
+
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 28px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: var(--bg-alt);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    transition: var(--transition);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.theme-toggle .toggle-ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: var(--transition);
+    transform: translateX(0);
+    pointer-events: none;
+}
+
+/* Estado DARK → move a bolinha para a direita */
+
+body[data-theme="dark"] .theme-toggle .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Ajuste de contraste no dark */
+
+body[data-theme="dark"] .theme-toggle {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =============================
+   RESPONSIVO
+============================= */
+
+@media (min-width: 768px) {
+    .cursos-lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,44 @@
+// =====================
+//  THEME TOGGLE
+// =====================
+
+// Seleciona o body (onde vamos colocar o tema)
+const body = document.body;
+
+// Checa se já existe um tema salvo no localStorage
+const savedTheme = localStorage.getItem("theme");
+
+// Aplica se existir
+if (savedTheme) {
+    body.setAttribute("data-theme", savedTheme);
+}
+
+// Cria o botão no header depois que o DOM carrega
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header .container");
+
+    // Botão simples (vamos estilizar depois)
+    const themeBtn = document.createElement("button");
+    themeBtn.classList.add("theme-toggle");
+
+    // Estrutura interna do switch
+    themeBtn.innerHTML = `
+    <span class="icon-sun">🌞</span>
+    <span class="toggle-ball"></span>
+    <span class="icon-moon">🌙</span>
+  `;
+
+    themeBtn.addEventListener("click", () => {
+        const current = body.getAttribute("data-theme");
+
+        // alternando claro ↔ escuro
+        const newTheme = current === "dark" ? "light" : "dark";
+
+        body.setAttribute("data-theme", newTheme);
+
+        // salvar no localStorage
+        localStorage.setItem("theme", newTheme);
+    });
+
+    header.appendChild(themeBtn);
+});

@@ -1,0 +1,62 @@
+[
+    {
+        "nome": "Luan",
+        "idade": 32,
+        "itens": ["Força", " Agilidade", " Velocidade", " Destreza"]
+    },
+    {
+        "nome": "Joana",
+        "idade": 53,
+        "itens": ["Magia", " Agilidade", " Destreza"]
+    },
+    {
+        "nome": "Evelyn",
+        "idade": 29,
+        "itens": ["Força", " Agilidade", " Magia"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    },
+    {
+        "nome": "Kaique",
+        "idade": 27,
+        "itens": ["Velocidade", " Agilidade", " Destreza", " Força"]
+    }
+]
