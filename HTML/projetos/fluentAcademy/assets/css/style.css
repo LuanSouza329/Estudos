@@ -89,23 +89,28 @@ nav a:hover {
 ============================= */
 
 #hero {
-    background: var(--bg-alt);
-    text-align: center;
-    padding: 4rem 0;
-    background-image: url("../imagens/hemo.png");
-    background-position: top right;
+    background-image: url("../imagens/Spanish.jpg");
+    background-position: center ;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 70vh;
 }
 
+
 #hero h2 {
+    text-align: left;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-#hero p {
-    margin: 0.5rem auto 2rem auto;
+#hero>.container>p {
+    width: 70%;
 }
+
+#hero>.container>h2 {
+    width: 60%;
+}
+
 
 .btn {
     display: inline-block;
@@ -116,6 +121,8 @@ nav a:hover {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
+    position: relative;
+    top: 300px;
 }
 
 .btn:hover {
@@ -132,7 +139,6 @@ nav a:hover {
     padding: 20px;
     display: flex;
     gap: 10px;
-    ;
 }
 
 #quem-somos>.sobre {
@@ -174,6 +180,7 @@ nav a:hover {
 .curso {
     background: var(--bg-alt);
     height: 250px;
+    margin: 0px 15px;
     border-radius: var(--radius);
     padding: 1.5rem;
     transition: var(--transition);
@@ -392,6 +399,32 @@ body[data-theme="dark"] .theme-toggle {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+
+    #hero {
+        background-image: url("../imagens/French.jpg");
+    }
+
+    #hero>.container>p {
+        font-size: 1em;
+        color: white;
+        padding: 10px;
+        width: 70%;
+    }
+
+    #hero>.container>h2 {
+        font-size: 1.5em;
+        width: 60%;
+        margin-left: 10px;
+        color: white;
+    }
+
+    .btn {
+        position: relative;
+        margin: 10px;
+        font-size: 0.8em;
+        top: 200px;
+    }
+
     #quem-somos {
         display: flex;
         flex-wrap: wrap;
