@@ -38,7 +38,11 @@ body {
 }
 
 h1,
-h2,
+h2 {
+    text-align: center;
+    font-size: 1.7em;
+}
+
 h3 {
     font-family: "Poppins", sans-serif;
 }
@@ -95,12 +99,11 @@ nav a:hover {
 }
 
 #hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 #hero p {
-    max-width: 600px;
     margin: 0.5rem auto 2rem auto;
 }
 
@@ -124,29 +127,26 @@ nav a:hover {
 ============================= */
 
 #quem-somos {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
     display: flex;
     gap: 10px;
-    width: 95%;
+    ;
 }
 
-#quem-somos>.container {
+#quem-somos>.sobre {
     padding: 2rem;
     margin: 2px;
+    border-radius: var(--radius);
 }
 
-#quem-somos>.container>h2 {
-    margin: 15px;
-    text-align: center;
-    font-size: 2em;
-}
 
-#quem-somos>.container>p {
-    margin: 15px;
+#quem-somos>.sobre>p {
     text-indent: 5px;
-
 }
 
-#quem-somos>.container>p::first-letter {
+#quem-somos>.sobre>p::first-letter {
     font-size: 1.8em;
     font-weight: bold;
 }
@@ -154,6 +154,8 @@ nav a:hover {
 #quem-somos>#metodologia {
     background-color: var(--bg-alt);
 }
+
+
 
 /* =============================
    CURSOS
@@ -171,19 +173,19 @@ nav a:hover {
 
 .curso {
     background: var(--bg-alt);
-    height: 200px;
+    height: 250px;
     border-radius: var(--radius);
     padding: 1.5rem;
     transition: var(--transition);
 }
 
 .curso-text {
-    background-color: #121212;
     color: white;
     opacity: 0.6;
-    border-radius: 4px;
-    padding: 5px;
+    padding: 8px;
     text-align: left;
+    border-radius: var(--radius);
+    background-color: #121212;
 }
 
 .english {
@@ -207,7 +209,6 @@ nav a:hover {
     background-size: cover;
 }
 
-
 .curso:hover {
     transform: translateY(-3px);
 }
@@ -216,11 +217,17 @@ nav a:hover {
    CONTATO
 ============================= */
 
+#contato {
+    text-align: center;
+}
+
 #contato form {
     display: flex;
-    flex-direction: column;
+    margin: auto;
+    width: 95%;
     gap: 0.8rem;
     margin-top: 1.5rem;
+    flex-direction: column;
 }
 
 input,
@@ -381,5 +388,12 @@ body[data-theme="dark"] .theme-toggle {
 @media (min-width: 768px) {
     .cursos-lista {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #quem-somos {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
