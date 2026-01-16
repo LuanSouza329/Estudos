@@ -55,11 +55,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 15px 0px 5px 0px;
     background: var(--bg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 
 .hamburger {
     display: none;
@@ -68,11 +67,20 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
+    padding: 0px 10px;
 }
 
-nav ul {
+.header-content {
     display: flex;
-    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
     list-style: none;
 }
 
@@ -83,9 +91,11 @@ nav a {
     transition: var(--transition);
 }
 
-nav a:hover {
+.menu a:hover {
     color: var(--primary);
 }
+
+
 
 /* =============================
    HERO
@@ -266,19 +276,45 @@ footer {
 ============================= */
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
+    .logo {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 1px;
+        display: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu>li {
+        text-align: center;
+        border: 0.5px solid var(--primary);
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .theme-toggle {
+        margin: 2px 5px;
+    }
+
     #hero {
         background-image: url("../imagens/French.jpg");
     }
 
-    .header-content {
-        display: none;
-    }
-
     .hamburger {
-        display: flex;
-    }
-
-    .hamburger {
+        display: block;
         color: #121212;
         background-color: #ffffff;
         padding: 0.7rem;
@@ -286,19 +322,6 @@ footer {
         border: none;
         cursor: pointer;
         transition: var(--transition);
-    }
-
-    .list {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 5px;
-    }
-
- 
-
-    .list>a {
-        text-decoration: none;
     }
 
     #hero>.container>p {
@@ -318,7 +341,7 @@ footer {
     .btn {
         margin: 10px;
         font-size: 0.8em;
-        top: 200px;
+        top: 150px;
     }
 
     #quem-somos {
