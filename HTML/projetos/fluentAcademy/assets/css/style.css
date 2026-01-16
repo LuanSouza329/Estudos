@@ -52,14 +52,17 @@ h3 {
 ============================= */
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
     background: var(--bg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.hamburger {
+    display: none;
 }
 
 .logo {
@@ -90,7 +93,7 @@ nav a:hover {
 
 #hero {
     background-image: url("../imagens/Spanish.jpg");
-    background-position: center ;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
@@ -122,7 +125,7 @@ nav a:hover {
     font-weight: 600;
     transition: var(--transition);
     position: relative;
-    top: 300px;
+    top: 250px;
 }
 
 .btn:hover {
@@ -245,19 +248,6 @@ textarea {
     font-size: 1rem;
 }
 
-button {
-    background: var(--primary);
-    color: white;
-    padding: 0.8rem;
-    border-radius: var(--radius);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-button:hover {
-    opacity: 0.9;
-}
 
 /* =============================
    FOOTER
@@ -270,138 +260,45 @@ footer {
     background: var(--bg-alt);
 }
 
-/* =============================
-   DARK MODE
-============================= */
-
-body[data-theme="dark"] {
-    --bg: #151515;
-    /* fundo quente neutro */
-    --bg-alt: #1e1e1e;
-    /* contraste suave */
-    --text: #e8e0d4;
-    /* marfim */
-    --primary: #389dfc;
-    /* azul neutro (não neon) */
-    --accent: #1dbd71;
-    /* verde quente */
-    --highlight: #ffe08a;
-    /* amarelo creme */
-}
-
-
-body[data-theme="dark"] #hero {
-    background: #121212;
-}
-
-body[data-theme="dark"] p {
-    color: #e4dbcb;
-}
-
-body[data-theme="dark"] .curso,
-body[data-theme="dark"] input,
-body[data-theme="dark"] textarea,
-body[data-theme="dark"] .theme-toggle {
-    background: #1e1e1e;
-    border: 1px solid rgba(255, 240, 220, 0.06);
-}
-
-body[data-theme="dark"] .curso {
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-body[data-theme="dark"] .curso {
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-body[data-theme="dark"] .english {
-    background-image: url("../imagens/English.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-body[data-theme="dark"] .spanish {
-    background-image: url("../imagens/Spanish.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-body[data-theme="dark"] .french {
-    background-image: url("../imagens/French.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-
-
-/* =============================
-   SWITCH DE TEMA
-============================= */
-
-.theme-toggle {
-    position: relative;
-    width: 60px;
-    height: 28px;
-    border-radius: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background: var(--bg-alt);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px;
-    transition: var(--transition);
-}
-
-.theme-toggle .icon-sun,
-.theme-toggle .icon-moon {
-    font-size: 14px;
-    pointer-events: none;
-}
-
-.theme-toggle .toggle-ball {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--accent);
-    transition: var(--transition);
-    transform: translateX(0);
-    pointer-events: none;
-}
-
-/* Estado DARK → move a bolinha para a direita */
-
-body[data-theme="dark"] .theme-toggle .toggle-ball {
-    transform: translateX(30px);
-}
-
-/* Ajuste de contraste no dark */
-
-body[data-theme="dark"] .theme-toggle {
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
 
 /* =============================
    RESPONSIVO
 ============================= */
-
-@media (min-width: 768px) {
-    .cursos-lista {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
     #hero {
         background-image: url("../imagens/French.jpg");
+    }
+
+    .header-content {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger {
+        color: #121212;
+        background-color: #ffffff;
+        padding: 0.7rem;
+        border-radius: var(--radius);
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+
+ 
+
+    .list>a {
+        text-decoration: none;
     }
 
     #hero>.container>p {
@@ -419,7 +316,6 @@ body[data-theme="dark"] .theme-toggle {
     }
 
     .btn {
-        position: relative;
         margin: 10px;
         font-size: 0.8em;
         top: 200px;
@@ -428,5 +324,16 @@ body[data-theme="dark"] .theme-toggle {
     #quem-somos {
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #hero {
+        background-image: url("../imagens/English.jpg");
+    }
+
+    .btn {
+        font-size: 0.8em;
+        top: 220px;
     }
 }
