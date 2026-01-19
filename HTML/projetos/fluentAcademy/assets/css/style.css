@@ -22,12 +22,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", sans-serif;
     line-height: 1.5;
 }
 
@@ -37,10 +37,9 @@ body {
     padding: 2rem 0;
 }
 
-h1,
 h2 {
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 h3 {
@@ -58,6 +57,10 @@ header {
     padding: 15px 0px 5px 0px;
     background: var(--bg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 2px rgb(145, 145, 145);
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .hamburger {
@@ -102,43 +105,38 @@ nav a {
 ============================= */
 
 #hero {
-    background-image: url("../imagens/Spanish.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 10px;
+    background: url("../imagens/Spanish.jpg") center no-repeat;
     background-size: cover;
     height: 70vh;
 }
 
-
-#hero h2 {
-    text-align: left;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#hero>.container>p {
+#hero-text {
     width: 70%;
 }
 
-#hero>.container>h2 {
-    width: 60%;
+#hero-text>h2 {
+    text-align: left;
+    margin-bottom: 10px;
 }
 
-
-.btn {
-    display: inline-block;
-    background: var(--accent);
+#btn_cursos {
+    text-align: center;
+    width: 18%;
+    font-size: 0.9em;
+    padding: 0.7rem 1em;
     color: white;
-    padding: 0.7rem 1.4rem;
-    border-radius: var(--radius);
     text-decoration: none;
     font-weight: 600;
+    border-radius: var(--radius);
+    background: var(--accent);
     transition: var(--transition);
-    position: relative;
-    top: 250px;
 }
 
-.btn:hover {
+#btn_cursos:hover {
     opacity: 0.9;
 }
 
@@ -160,7 +158,6 @@ nav a {
     border-radius: var(--radius);
 }
 
-
 #quem-somos>.sobre>p {
     text-indent: 5px;
 }
@@ -174,8 +171,6 @@ nav a {
     background-color: var(--bg-alt);
 }
 
-
-
 /* =============================
    CURSOS
 ============================= */
@@ -185,9 +180,9 @@ nav a {
 }
 
 .cursos-lista {
-    display: grid;
+    margin-top: 10px;
+    display: flex;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .curso {
@@ -258,6 +253,20 @@ textarea {
     font-size: 1rem;
 }
 
+#submit {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0.7rem 1em;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
 
 /* =============================
    FOOTER
@@ -270,21 +279,19 @@ footer {
     background: var(--bg-alt);
 }
 
-
 /* =============================
    RESPONSIVO
 ============================= */
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
     .logo {
-        display: flex;
         width: 100%;
+        display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .header-content {
-        display: flex;
         flex-direction: column;
     }
 
@@ -313,6 +320,10 @@ footer {
         background-image: url("../imagens/French.jpg");
     }
 
+    #btn_cursos {
+        font-size: 0.8em;
+    }
+
     .hamburger {
         display: block;
         color: #121212;
@@ -324,39 +335,32 @@ footer {
         transition: var(--transition);
     }
 
-    #hero>.container>p {
-        font-size: 1em;
-        color: white;
-        padding: 10px;
+    #hero-text {
+        font-size: 0.9em;
         width: 70%;
-    }
-
-    #hero>.container>h2 {
-        font-size: 1.5em;
-        width: 60%;
-        margin-left: 10px;
         color: white;
     }
 
-    .btn {
-        margin: 10px;
-        font-size: 0.8em;
-        top: 150px;
+    .cursos-lista {
+        flex-flow: column;
     }
 
     #quem-somos {
-        display: flex;
         flex-wrap: wrap;
+    }
+
+    #btn_cursos {
+        width: 30%;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1026px) {
     #hero {
         background-image: url("../imagens/English.jpg");
     }
 
-    .btn {
-        font-size: 0.8em;
-        top: 220px;
+    #btn_cursos {
+        width: 30%;
+        font-size: 1em;
     }
 }
