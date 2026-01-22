@@ -25,6 +25,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--bg);
     color: var(--text);
@@ -53,14 +57,15 @@ h3 {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 0px 5px 0px;
-    background: var(--bg);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 1px 2px rgb(145, 145, 145);
     position: sticky;
     top: 0;
+    opacity: 0.9;
     z-index: 5;
+    background: var(--bg);
+    padding: 15px 0px 5px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 2px rgb(145, 145, 145);
 }
 
 .hamburger {
@@ -80,9 +85,9 @@ header {
     justify-content: space-between;
 }
 
-.menu {
+#menu {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
     list-style: none;
 }
@@ -92,10 +97,15 @@ nav a {
     color: var(--text);
     font-weight: 500;
     transition: var(--transition);
+    transition: 0.3s;
 }
 
-.menu a:hover {
-    color: var(--primary);
+#menu a:hover {
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(230, 229, 229);
 }
 
 
@@ -155,7 +165,12 @@ nav a {
 #quem-somos>.sobre {
     padding: 2rem;
     margin: 2px;
+    opacity: 0;
     border-radius: var(--radius);
+
+    animation: appear linear forwards;
+    animation-timeline: view();
+    animation-range: entry cover 50%;
 }
 
 #quem-somos>.sobre>p {
@@ -171,6 +186,11 @@ nav a {
     background-color: var(--bg-alt);
 }
 
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
 /* =============================
    CURSOS
 ============================= */
@@ -295,19 +315,22 @@ footer {
         flex-direction: column;
     }
 
-    .menu {
-        display: flex;
+  
+    #menu {
+        display: none;
         flex-direction: column;
         margin-top: 10px;
         gap: 1px;
-        display: none;
         width: 100%;
         padding: 0;
     }
 
-    .menu>li {
+    nav a {
+        display: block;
+    }
+
+    #menu>li {
         text-align: center;
-        border: 0.5px solid var(--primary);
         width: 100%;
         padding: 8px 0;
     }
@@ -336,8 +359,6 @@ footer {
     }
 
     #hero-text {
-        font-size: 0.9em;
-        width: 70%;
         color: white;
     }
 

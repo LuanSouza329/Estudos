@@ -3,7 +3,7 @@
 ============================= */
 
 body[data-theme="dark"] {
-    --bg: #151515;
+    --bg: #161717;
     /* fundo quente neutro */
     --bg-alt: #1e1e1e;
     /* contraste suave */
@@ -26,6 +26,10 @@ body[data-theme="dark"] p {
     color: #e4dbcb;
 }
 
+body[data-theme="dark"] h2 {
+    color: var(--text);
+}
+
 body[data-theme="dark"] .curso,
 body[data-theme="dark"] input,
 body[data-theme="dark"] textarea,
@@ -33,6 +37,23 @@ body[data-theme="dark"] .theme-toggle {
     background: #1e1e1e;
     border: 1px solid rgba(255, 240, 220, 0.06);
 }
+
+body[data-theme="dark"] #hero {
+    background: url("../imagens/French.jpg") center no-repeat;
+    background-size: cover;
+    color: var(--bg-alt);
+}
+
+body[data-theme="dark"] #hero-text>p {
+    color: var(--text);
+}
+
+body[data-theme="dark"] #hero-text>h2 {
+    margin-top: 10px;
+    color: var(--text);
+
+}
+
 
 body[data-theme="dark"] .curso {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
@@ -62,9 +83,6 @@ body[data-theme="dark"] .french {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-
 
 
 /* =============================
@@ -113,4 +131,9 @@ body[data-theme="dark"] .theme-toggle .toggle-ball {
 
 body[data-theme="dark"] .theme-toggle {
     border-color: rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme="dark"] .hamburger {
+    background-color: var(--bg);
+    color: var(--text);
 }
