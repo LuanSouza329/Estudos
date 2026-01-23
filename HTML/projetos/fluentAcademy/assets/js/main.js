@@ -66,14 +66,6 @@ hamburguer.addEventListener("click", () => {
     }
 });
 
-
-/* Controle do menu quando um link é clicado */
-links.forEach((link) => {
-    link.addEventListener("click", (e) => {
-        menu.style.display = "none";
-    })
-});
-
 /* Controle do menu quando a janela é rendimencionada */
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
@@ -82,3 +74,11 @@ window.addEventListener("resize", () => {
         menu.style.display = "none";
     }
 });
+
+/* 
+links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        menu.style.display = "none";
+    })
+});
+ */
