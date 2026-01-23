@@ -16,7 +16,7 @@ if (savedTheme) {
 
 // Cria o botão no header depois que o DOM carrega
 document.addEventListener("DOMContentLoaded", () => {
-    const menu = document.querySelector("#menu");
+    const menu = document.querySelector(".menu");
 
     // Botão simples (vamos estilizar depois)
     const themeBtn = document.createElement("button");
@@ -45,19 +45,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* 
-    BTN - MENU
+    Controle do menu hamburhuer
 */
 
 const hamburguer = document.querySelector(".hamburger");
 const links = [...document.querySelectorAll(".link")];
-const menu = document.querySelector("#menu");
+const menu = document.querySelector(".menu");
 
-hamburguer.addEventListener("click", ()=>{
-    menu.style.display = "flex";
-})
+/* switch entre menu aberto e fechado */
+let activeMenu = false;
 
+hamburguer.addEventListener("click", () => {
+    if (!activeMenu) {
+        menu.style.display = "flex";
+        activeMenu = true;
+
+    } else if (activeMenu) {
+        menu.style.display = "none";
+        activeMenu = false;
+    }
+});
+
+
+/* Controle do menu quando um link é clicado */
 links.forEach((link) => {
     link.addEventListener("click", (e) => {
         menu.style.display = "none";
     })
-})
+});
+
+/* Controle do menu quando a janela é rendimencionada */
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        menu.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+    }
+});

@@ -85,7 +85,7 @@ header {
     justify-content: space-between;
 }
 
-#menu {
+.menu {
     display: flex;
     gap: 15px;
     padding: 10px;
@@ -100,15 +100,13 @@ nav a {
     transition: 0.3s;
 }
 
-#menu a:hover {
+.menu a:hover {
     border-radius: 4px;
     padding: 8px 10px;
     font-weight: bold;
     color: black;
     background-color: rgb(230, 229, 229);
 }
-
-
 
 /* =============================
    HERO
@@ -191,6 +189,7 @@ nav a {
         opacity: 1;
     }
 }
+
 /* =============================
    CURSOS
 ============================= */
@@ -315,21 +314,19 @@ footer {
         flex-direction: column;
     }
 
-  
-    #menu {
+    .menu {
         display: none;
         flex-direction: column;
         margin-top: 10px;
         gap: 1px;
         width: 100%;
-        padding: 0;
     }
 
     nav a {
         display: block;
     }
 
-    #menu>li {
+    .menu>li {
         text-align: center;
         width: 100%;
         padding: 8px 0;
