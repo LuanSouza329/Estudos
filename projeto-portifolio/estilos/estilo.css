@@ -1,27 +1,14 @@
 @charset "UTF-8";
 
-/* 
-  Variáveis para cores:
-  --fundo-principal
-  --texto
-  --texto-inverso
-  --destaque
-  --destaque-inverso
-  --fundo-card
-*/
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --fundo-principal: #f5f5f5;
-    --texto: #222222;
-    --texto-inverso: #ffffff;
-    --destaque: #0077ff;
-    --destaque-inverso: #66bbff;
-    --fundo-card: #ffffff
+body, header, article, main, footer, .carrossel-track .projeto {
+    transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease;
 }
 
 body {
@@ -29,6 +16,20 @@ body {
     line-height: 1.5em;
     background-color: var(--fundo-principal);
     color: var(--texto);
+}
+
+header, footer {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+}
+
+article {
+    background-color: var(--fundo-card);
+    color: var(--texto);
+}
+
+a, a:link, a:visited {
+    color: var(--destaque);
 }
 
 header {
@@ -51,16 +52,10 @@ header {
 
 nav#menu a {
     text-decoration: none;
-    color: var(--texto-inverso);
     font-weight: 600;
     padding: 12px 15px;
     border-radius: 5px;
     transition: background-color 0.5s, color 0.5s;
-}
-
-nav#menu a:hover {
-    background-color: var(--destaque-inverso);
-    color: var(--destaque);
 }
 
 main {
@@ -109,15 +104,6 @@ div#social {
     font-size: 1.5em;
     gap: 1em;
     margin-top: 15px;
-}
-
-div#social a {
-    color: var(--destaque);
-    transition: color 0.5s;
-}
-
-div#social a:hover {
-    color: var(--destaque-inverso);
 }
 
 section#detalhes {
@@ -288,4 +274,13 @@ footer {
         overflow: hidden;
         border-radius: 8px;
     }
+}
+
+i.fa-solid, i.fa-brands {
+    color: inherit;
+    transition: color 280ms ease;
+}
+
+.theme-toggle { 
+    background: var(--fundo-card); 
 }

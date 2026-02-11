@@ -1,17 +1,24 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
-// Persistência do tema
+// Persistência do tema (usa localStorage; se não existir, usa preferência do sistema)
 const temasalvo = localStorage.getItem('tema');
-temaEscuro(temasalvo === 'escuro');
+if (temasalvo) {
+  temaEscuro(temasalvo === 'escuro');
+} else if (window.matchMedia) {
+  const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  temaEscuro(prefereEscuro);
+}
 
 // Função para alternar entre tema claro e escuro
 function temaEscuro(tipo) {
   if (tipo == true) {
     body.classList.add('escuro');
+    body.setAttribute('data-theme', 'dark');
     botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     body.classList.remove('escuro');
+    body.removeAttribute('data-theme');
     botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }

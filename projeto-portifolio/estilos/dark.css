@@ -1,0 +1,95 @@
+/* ========================================
+   DARK MODE THEME - Variáveis e estilos
+   (Fluent Academy inspired)
+   ======================================== */
+
+/* Modo escuro ativado via class "escuro" no body */
+body.escuro {
+    --fundo-principal: #07101A; 
+    --texto: #EAF6FF; 
+    --texto-inverso: #07101A;
+    --destaque: #2EC7E0; 
+    --destaque-inverso: #0B7780; 
+    --fundo-card: #0F1724; 
+
+    --indicador-inativo: #122027;
+    --indicador-ativo-border: #2EC7E0;
+}
+
+body.escuro .indicador {
+    background-color: var(--indicador-inativo);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.escuro .indicador.ativo {
+    background-color: var(--destaque);
+    border: 2px solid var(--indicador-ativo-border);
+}
+
+/* ========================================
+   Dark mode (Fluent Academy inspired) 
+   via data-theme="dark"
+   ======================================== */
+
+body[data-theme="dark"] {
+    --fundo-principal: #161717; 
+    --fundo-card: #1e1e1e;
+    --texto: #e8e0d4; 
+    --destaque: #389dfc; 
+    --destaque-inverso: #1b6fbf;
+    --indicador-inativo: #2b2b2b;
+    --indicador-ativo-border: #389dfc;
+    --link-color: #389dfc;
+}
+
+body[data-theme="dark"] header,
+body[data-theme="dark"] footer {
+    background-color: var(--fundo-card);
+    color: var(--texto);
+}
+
+body[data-theme="dark"] p,
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] a {
+    color: var(--texto);
+}
+
+body[data-theme="dark"] .carrossel-track .projeto {
+    background-color: #1e1e1e;
+    border-left-color: rgba(255,255,255,0.05);
+}
+
+body[data-theme="dark"] .indicador {
+    background-color: var(--indicador-inativo);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+body[data-theme="dark"] .indicador.ativo {
+    background-color: var(--destaque);
+    border: 2px solid var(--indicador-ativo-border);
+}
+
+body[data-theme="dark"] .theme-toggle { 
+    background: #1e1e1e; 
+    border-color: rgba(255,255,255,0.08); 
+}
+
+body[data-theme="dark"] i.fa-solid,
+body[data-theme="dark"] i.fa-brands {
+    color: var(--texto);
+}
+
+body[data-theme="dark"] nav#menu .fa-solid,
+body[data-theme="dark"] nav#menu .fa-brands {
+    color: var(--texto);
+}
+
+body[data-theme="dark"] div#social a i {
+    color: var(--texto);
+}
+
+body[data-theme="dark"] div#social a:hover i {
+    color: var(--destaque);
+}
