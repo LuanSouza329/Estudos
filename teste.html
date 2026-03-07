@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu {
+            flex-direction: column;
+            cursor: pointer;
+            padding: 3px 2px;
+        }
+
+        span{
+            width: 30px;
+            height: 2px;
+            background-color: #fff;   
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: flex;
+                gap: 9px;
+            }
+            li {
+                display: none;
+            }
+            span {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="logo">LOGO</p>
+
+        <li class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </li>
+        
+        <li>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </li>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const menu = document.querySelector('.menu');
+        const navLinks = document.querySelectorAll('header li a');
+
+        menu.addEventListener('click', () => {
+            navLinks.forEach(link => {
+                console.log(link);
+                link.style.display = link.style.display == 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
