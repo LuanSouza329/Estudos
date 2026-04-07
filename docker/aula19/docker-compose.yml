@@ -1,0 +1,20 @@
+services:
+  meubanco:
+    image: mysql:5.7
+    container_name: banco-cfbCursos
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: meusite
+    volumes:
+      - dados-mysql:/var/lib/mysql
+
+  minhabase:
+    image: adminer:latest
+    container_name: minha-base
+    ports:
+      - "8090:8080"
+    depends_on:
+      - meubanco
+
+volumes:
+  dados-mysql:
