@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "exemplo02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+      "express": "^5.2.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
